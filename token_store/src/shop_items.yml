@@ -1,0 +1,7 @@
+item:
+  - dirt:
+       cost: 4
+       second_cost: 8
+  - stone:
+       cost: 8
+       second_cost: 10

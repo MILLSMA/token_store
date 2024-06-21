@@ -1,0 +1,12 @@
+name: HelloWorld
+version: 1.0
+author: Madeleine
+main: token_store.Main
+description: Says hello to the player
+api-version: 1.20
+
+commands:
+  Hello:
+    description: test plugin
+  Redeem:
+     description: open menu
