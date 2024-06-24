@@ -1,5 +1,8 @@
 package token_store;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -20,7 +23,18 @@ public class Main extends JavaPlugin {
 		contents = shop_data.getConfig();
 		
 		RedeemMenu menu = new RedeemMenu(this, contents);
+		
+		
+
+		Map<Integer, MenuItem> main_dict = new HashMap<>(); 
+		main_dict.put(11, new MenuItem("diamond", "Survival Store", "Buy survival items with diamonds", null, null));
+		main_dict.put(15, new MenuItem("gold block", "Token Store", "Buy speciality items with tokens", null, null));
+
+		MainMenu main_menu_gui = new MainMenu("Main", 27, main_dict);
+		
+		
 		this.getCommand("redeem").setExecutor(menu);
+		this.getCommand("test").setExecutor(main_menu_gui);
 		this.getServer().getPluginManager().registerEvents(menu, this);
 		
 		

@@ -10,3 +10,5 @@ commands:
     description: test plugin
   Redeem:
      description: open menu
+  Test:
+     description: test command

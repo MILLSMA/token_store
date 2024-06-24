@@ -45,9 +45,12 @@ public class RedeemMenu implements CommandExecutor, Listener{
 	 * @param e: event called
 	 */
 	@EventHandler
-	public void onClick(InventoryClickEvent e) {
+	public void onClick(InventoryClickEvent e) { 
 		System.out.println("Shop click detected!");
 		if(!(e.getView().getTitle().contains("Token Shop")))return;
+		System.out.println(e.getSlotType());
+		System.out.println(e.getSlot());
+		System.out.println(e.getRawSlot());
 		e.setCancelled(true);//this means the gui wont be affected
 		
 
